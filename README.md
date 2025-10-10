@@ -217,9 +217,9 @@ Please see [Visualization](docs/visualization.md) page for details.
 - Inference time: 244.543958902359 ms
 - FPS: 4.08924434072517
 
-## 6. Limitation
+<!-- ## 6. Limitation
 
-Our approach use `K-Means` on human joints to perform cross-view human matching, which means the number of human in the scene need to be x fixed value in the whole sequence. We are working on another new cross-view method which allow the input with uncertain number of humans.
+Our approach use `K-Means` on human joints to perform cross-view human matching, which means the number of human in the scene need to be fixed value in the whole sequence. We are working on another new cross-view method which allow the input with uncertain number of humans. -->
 
 ## TODO
 

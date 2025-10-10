@@ -231,6 +231,7 @@ Our approach use `K-Means` on human joints to perform cross-view human matching,
 - [ ] Hi4D demo support
 - [x] Panoptic demo support
 - [ ] Shelf demo support
+- [ ] Blender support
 - [ ] Documentation
 
 ## References

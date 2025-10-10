@@ -1,0 +1,16 @@
+# python
+**/__pycache__
+
+# dataset cache
+data/chi3d/*.pkl
+data/hi4d/*.pkl
+
+# models
+**/*.npy
+**/*.npz
+**/*.pkl
+**/*.pt
+
+# output file
+output/chi3d_s4_grab_07_full/visualization
+output/panoptic_160422_haggling1_3200_3500/visualization

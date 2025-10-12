@@ -13,6 +13,11 @@ Human mesh recovery offers substantial potential for detailed behavior analysis 
 1. Please follow [MultiHMR](https://github.com/naver/multi-hmr) to set up your python virtual environment.
 2. Install ffmpeg in the env created above.
 
+    ```
+    conda activate multihmr
+    conda install conda-forge::ffmpeg
+    ```
+
 ### 2.2 Dataset
 
 Please see [Dataset Setup](docs/data.md) page for details.
@@ -29,7 +34,7 @@ Please download from [MultiHMR](https://github.com/naver/multi-hmr). Place all f
 
 **Our Multi-HMR Checkpoints (finetuned on CHI3D/Hi4D)**
 
-Please download our checkpoints from [Google Drive](). Place all files under `checkpoints/saved`.
+Please download our checkpoints from [Google Drive](https://drive.google.com/drive/folders/1JR8-bEjXljvBg_eNRNnAmQrg5GL0A9Z0?usp=sharing). Place all files under `checkpoints/saved`.
 
 ## 2.4 SMPL/SMPL-X
 
@@ -47,7 +52,7 @@ Please download the following files from [SMPL-X](https://smpl-x.is.tue.mpg.de/i
 
 ## 2.5 Other Support Files
 
-Please download from [Google Drive]().
+Please download from [Google Drive](https://drive.google.com/drive/folders/1MaaKqCDE_iDvBH0i7a73_ZAkoXzAsJQU?usp=sharing).
 
 - `J_regressor_h36m.npy`: place under `models`.
 - `smpl_mean_params.npz`: place under `models`.
@@ -230,7 +235,7 @@ Our approach use `K-Means` on human joints to perform cross-view human matching,
 - [ ] Hi4D evaluation support
 - [ ] Hi4D demo support
 - [x] Panoptic demo support
-- [ ] Shelf demo support
+- [x] Shelf demo support
 - [ ] Blender support
 - [ ] Documentation
 

@@ -26,6 +26,8 @@ def main(args):
         images, K, R, t = loader.load(args.subject, args.sequence)
     elif args.dataset == 'panoptic':
         images, K, R, t = loader.load(args.sequence)
+    elif args.dataset == 'shelf':
+        images, K, R, t = loader.load()
     else:
         raise NotImplementedError()
     
@@ -35,7 +37,7 @@ def main(args):
         tracks = pipeline.step(images[frame_id], K, R, t)
             
     tracking = pipeline.finalize()
-    
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     
@@ -68,10 +70,10 @@ if __name__ == "__main__":
     # Pipeline args
     parser.add_argument('--smooth', action='store_true', help='apply 1euro filter to smooth the predictions')
     parser.add_argument('--auto_interpolate', action='store_true', help='automatically interpolate missing frames during tracking')
-    parser.add_argument('--vis', action='store_true')
+    parser.add_argument('--vis', action='store_true', help="save visualization")
     parser.add_argument('--vis_mode', type=str, default='scatter', choices=['scatter', 'render'])
-    parser.add_argument('--vid', action='store_true')
-    parser.add_argument('--save', action='store_true')
+    parser.add_argument('--vid', action='store_true', help='generate video by cat all visualization images')
+    parser.add_argument('--save', action='store_true', help='save tracked SMPL/SMPL-X parameters')
     
     # Sequence args
     parser.add_argument('--subject', type=str, default="s04", choices=['s02', 's03', 's04'])  # for chi3d only

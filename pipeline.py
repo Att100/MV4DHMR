@@ -217,7 +217,7 @@ class Pipeline(object):
         
         payload = [
             recursive_apply(dict(
-                smplx_params=smplx_params,
+                smplx_params=smplx_params, 
                 pred_v3d=pred_v3d,
                 pred_j3d=pred_j3d), lambda x:x[i].cpu().numpy()) for i in range(len(pred_j3d))]
         tracks = self.tracker.update(pred_j3d.cpu().numpy(), payload)
@@ -377,7 +377,7 @@ class Pipeline(object):
         
         tracks = self.forward_tracking(smplx_params, pred_v3d, pred_j3d)
         
-        # self.visuaize_frame(self.counter, imgs, tracks, K, R, t)
+        self.visuaize_frame(self.counter, imgs, tracks, K, R, t)
         
         return tracks
         
@@ -443,9 +443,9 @@ class Pipeline(object):
         you can use the inverse_index to retrieve the smplx_params of each human in each frame.
         
         e.g. Loading tracking frame by frame:
-            for frame_id in range(n_frames):
-                for trk_id, invi in inverse_index[frame_id]:
-                    smplx_params = tracking[trk_id][invi][1]
+        for frame_id in range(n_frames):
+            for trk_id, invi in inverse_index[frame_id]:
+                smplx_params = tracking[trk_id][invi][1]
                     
         """
         smplx_to_export = dict(
@@ -466,3 +466,14 @@ class Pipeline(object):
         
         print(f"Tracked SMPL/SMPL-X sequence saved to '{export_path}'")
             
+            
+def postprocess_exported(smplx_exported, smplx_model, n_humans):
+    """
+    Tracking results is not always accurate. In some cases, there are 
+    N human in scene, but more than N humans are tracked. This function 
+    will merge tracking that link to the same human
+    """
+    
+    tracking = smplx_exported['tracking']
+    inverse_index = smplx_exported['inverse_index']
+    

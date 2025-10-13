@@ -14,3 +14,7 @@ data/hi4d/*.pkl
 # output file
 output/chi3d_s4_grab_07_full/visualization
 output/panoptic_160422_haggling1_3200_3500/visualization
+
+# sample data
+sample_data/panoptic-toolbox
+sample_data/chi3d

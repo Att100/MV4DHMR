@@ -102,3 +102,21 @@
 
 ## 4. Shelf
 
+Download `Shelf` dataset from [Shelf](https://campar.in.tum.de/Chair/MultiHumanPose), or you can run the following command in your dataset directory.
+
+```
+wget "https://www.campar.in.tum.de/public_datasets/2014_cvpr_belagiannis/Shelf.tar.bz2" -O "Shelf.tar.bz2"
+tar -xvf Shelf.tar.bz2
+```
+
+Your extracted data directory will have the following folders:
+
+```
+Shelf
+├─Calibration
+├─Camera0
+├─Camera1
+├─Camera2
+├─Camera3
+└─Camera4
+```

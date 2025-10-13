@@ -12,19 +12,27 @@
     conda install conda-forge::ffmpeg
     ```
 
-### 1.2 Run Demo Sequence
+### 1.2 Our Ready to Run Codebase
+
+- Please download our `ready-to-run` codebase (with all required model checkpoints and SMPL/SMPL-X support), from [Google Drive]() and extract the files.
+
+- Under `sample_data`, we provide a short sequence from Panoptic dataset.
+
+### 1.3 Run Demo Sequence (Panoptic)
 
 Activate virtual environment and:
 
 - On Linux based OS
 
     ```
+    # !! replace the path behind `--dataset_dir` with your own panoptic-toolbox path
     sh demo.sh
     ```
 
 - On Windows OS
 
     ```
+    # !! replace the path behind `--dataset_dir` with your own panoptic-toolbox path
     demo.cmd
     ```
 
@@ -62,5 +70,68 @@ After the whole process is finished, you can find the output:
 
 - `Visualization`: <YOUR_OUTPUT_DIR>/visualization
 - `Video`: <YOUR_OUTPUT_DIR>/output.mp4
+
+### 1.4 Other Datasets
+
+**CHI3D**
+
+```
+# !! replace the path behind `--dataset_dir` with your own CHI3D path
+python demo.py --dataset chi3d \
+    --dataset_dir D:/Workspace/datasets/chi3d \
+    --pretrained_path ./pretrained/multiHMR_672_L.pt \
+    --checkpoint_path checkpoints/saved/model_large_672_chi3d_sv.pt \
+    --smplx_dir models \
+    --smplx2smpl_path models/smplx/smplx2smpl.pkl \
+    --j_regressor_h36m_path models/J_regressor_h36m.npy \
+    --save_dir ./output/chi3d_s4_grab_07_full \
+    --subject s4 \
+    --sequence 'Grab 7' \
+    --image_size 672 \
+    --n_humans 2 \
+    --backbone dinov2_vitl14 \
+    --smplx_type smplx \
+    --data_smplx_type smplx \
+    --eval_mode finetune \
+    --recenter \
+    --smooth \
+    --auto_interpolate \
+    --vis \
+    --vis_mode render \
+    --vid \
+    --save \
+    --device 0
+```
+
+**Shelf**
+
+```
+# !! replace the path behind `--dataset_dir` with your own Shelf path
+python demo.py --dataset shelf \
+    --dataset_dir D:\\Workspace\\datasets\\Shelf \
+    --pretrained_path ./models/multiHMR/multiHMR_896_L.pt \
+    --checkpoint_path checkpoints/saved/model_large_672_chi3d_sv.pt \
+    --start_frame 530 \
+    --end_frame 870 \
+    --smplx_dir models \
+    --smplx2smpl_path models/smplx/smplx2smpl.pkl \
+    --j_regressor_h36m_path models/J_regressor_h36m.npy \
+    --save_dir ./output/shelf_530_870 \
+    --image_size 896 \
+    --image_size_org 1032,776 \
+    --n_humans 4 \
+    --backbone dinov2_vitl14 \
+    --smplx_type smplx \
+    --data_smplx_type smplx \
+    --eval_mode zeroshot \
+    --smooth \
+    --auto_interpolate \
+    --vis \
+    --vis_mode scatter \
+    --vid \
+    --save \
+    --device 0
+```
+
 
 

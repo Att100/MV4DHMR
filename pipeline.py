@@ -467,13 +467,11 @@ class Pipeline(object):
         print(f"Tracked SMPL/SMPL-X sequence saved to '{export_path}'")
             
             
-def postprocess_exported(smplx_exported, smplx_model, n_humans):
-    """
-    Tracking results is not always accurate. In some cases, there are 
-    N human in scene, but more than N humans are tracked. This function 
-    will merge tracking that link to the same human
-    """
+# def postprocess_exported(smplx_exported, smplx_model, n_humans):
+#     """
+#     Tracking results is not always accurate. In some cases, there are 
+#     N human in scene, but more than N humans are tracked. This function 
+#     will merge tracking that link to the same human
+#     """
     
-    tracking = smplx_exported['tracking']
-    inverse_index = smplx_exported['inverse_index']
-    
+#     raise NotImplementedError()

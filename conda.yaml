@@ -1,14 +1,13 @@
 name: multihmr
 channels:
-  - defaults
   - pytorch
   - nvidia
-  - xformers
   - conda-forge
+  - defaults
 dependencies:
   - python=3.9
-  - pytorch::pytorch=2.0.1
-  - pytorch::pytorch-cuda=11.7.0
+  - pytorch=2.0.1
+  - pytorch-cuda=11.8
   - pip
   - pip:
     - roma
@@ -23,6 +22,9 @@ dependencies:
     - trimesh==3.22.3
     - pyglet==1.5.24
     - gradio==4.13.0
+    - scikit-learn==1.6.1
+    - filterpy==1.4.5
+    - chumpy==0.70
 
 
 

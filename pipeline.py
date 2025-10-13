@@ -377,7 +377,7 @@ class Pipeline(object):
         
         tracks = self.forward_tracking(smplx_params, pred_v3d, pred_j3d)
         
-        self.visuaize_frame(self.counter, imgs, tracks, K, R, t)
+        # self.visuaize_frame(self.counter, imgs, tracks, K, R, t)
         
         return tracks
         

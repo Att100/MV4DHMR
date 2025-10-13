@@ -4,7 +4,14 @@
 
 ### 1.1 Environment
 
-1. Please follow [MultiHMR](https://github.com/naver/multi-hmr) to set up your python virtual environment.
+1. Install conda python virtual environment.
+    (modified from https://github.com/naver/multi-hmr)
+
+    ```
+    conda env create -f conda.yaml
+    conda activate multihmr
+    ```
+
 2. Install `ffmpeg` in the env created above.
 
     ```
@@ -76,7 +83,6 @@ After the whole process is finished, you can find the output:
 **CHI3D**
 
 ```
-# !! replace the path behind `--dataset_dir` with your own CHI3D path
 python demo.py --dataset chi3d \
     --dataset_dir ./sample_data/chi3d \
     --pretrained_path ./pretrained/multiHMR_672_L.pt \
@@ -85,8 +91,8 @@ python demo.py --dataset chi3d \
     --smplx2smpl_path models/smplx/smplx2smpl.pkl \
     --j_regressor_h36m_path models/J_regressor_h36m.npy \
     --save_dir ./output/chi3d_s4_grab_07_full \
-    --subject s4 \
-    --sequence 'Grab 7' \
+    --subject s04 \
+    --sequence "Grab 7" \
     --image_size 672 \
     --n_humans 2 \
     --backbone dinov2_vitl14 \

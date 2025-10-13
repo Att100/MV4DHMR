@@ -1,15 +1,16 @@
 # !/bin/bash
 
 python demo.py --dataset panoptic \
-    --dataset_dir D:\Workspace\datasets\panoptic-toolbox \
+    --dataset_dir ./sample-data/panoptic-toolbox \
     --pretrained_path ./models/multiHMR/multiHMR_896_L.pt \
     --checkpoint_path checkpoints/saved/model_large_672_chi3d_sv.pt \
     --sequence 160422_haggling1 \
-    --start_frame 3200 \
-    --end_frame 3500 \
+    --start_frame 0 \
+    --end_frame 500 \
     --smplx_dir models \
     --smplx2smpl_path models/smplx/smplx2smpl.pkl \
     --j_regressor_h36m_path models/J_regressor_h36m.npy \
+    --save_dir ./output/panoptic_160422_haggling1_3200_3500 \
     --image_size 896 \
     --image_size_org 1920,1080 \
     --n_humans 3 \

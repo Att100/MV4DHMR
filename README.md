@@ -78,7 +78,7 @@ After the whole process is finished, you can find the output:
 ```
 # !! replace the path behind `--dataset_dir` with your own CHI3D path
 python demo.py --dataset chi3d \
-    --dataset_dir D:/Workspace/datasets/chi3d \
+    --dataset_dir ./sample_data/chi3d \
     --pretrained_path ./pretrained/multiHMR_672_L.pt \
     --checkpoint_path checkpoints/saved/model_large_672_chi3d_sv.pt \
     --smplx_dir models \
@@ -98,36 +98,6 @@ python demo.py --dataset chi3d \
     --auto_interpolate \
     --vis \
     --vis_mode render \
-    --vid \
-    --save \
-    --device 0
-```
-
-**Shelf**
-
-```
-# !! replace the path behind `--dataset_dir` with your own Shelf path
-python demo.py --dataset shelf \
-    --dataset_dir D:\\Workspace\\datasets\\Shelf \
-    --pretrained_path ./models/multiHMR/multiHMR_896_L.pt \
-    --checkpoint_path checkpoints/saved/model_large_672_chi3d_sv.pt \
-    --start_frame 530 \
-    --end_frame 870 \
-    --smplx_dir models \
-    --smplx2smpl_path models/smplx/smplx2smpl.pkl \
-    --j_regressor_h36m_path models/J_regressor_h36m.npy \
-    --save_dir ./output/shelf_530_870 \
-    --image_size 896 \
-    --image_size_org 1032,776 \
-    --n_humans 4 \
-    --backbone dinov2_vitl14 \
-    --smplx_type smplx \
-    --data_smplx_type smplx \
-    --eval_mode zeroshot \
-    --smooth \
-    --auto_interpolate \
-    --vis \
-    --vis_mode scatter \
     --vid \
     --save \
     --device 0

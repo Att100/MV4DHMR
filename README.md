@@ -10,7 +10,14 @@ Human mesh recovery offers substantial potential for detailed behavior analysis 
 
 ### 2.1 Environment
 
-1. Please follow [MultiHMR](https://github.com/naver/multi-hmr) to set up your python virtual environment.
+1. Install conda python virtual environment.
+    (modified from https://github.com/naver/multi-hmr)
+
+    ```
+    conda env create -f conda.yaml
+    conda activate multihmr
+    ```
+    
 2. Install ffmpeg in the env created above.
 
     ```

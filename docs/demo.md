@@ -67,8 +67,8 @@ python demo.py --dataset chi3d \
     --smplx2smpl_path models/smplx/smplx2smpl.pkl \
     --j_regressor_h36m_path models/J_regressor_h36m.npy \
     --save_dir ./output/chi3d_s4_grab_07_full \
-    --subject s4 \
-    --sequence 'Grab 7' \
+    --subject s04 \
+    --sequence "Grab 7" \
     --image_size 672 \
     --n_humans 2 \
     --backbone dinov2_vitl14 \

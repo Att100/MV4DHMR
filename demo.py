@@ -15,6 +15,8 @@ from datasets.closeint.chi3d import CHI3DSequenceMetaLoader
 from utils.camera import perspective_projection
 from datasets import sequence_loaders
 
+os.environ["PYOPENGL_PLATFORM"] = "egl"
+os.environ['EGL_DEVICE_ID'] = '0'
 
 def main(args):
     device = torch.device(f'cuda:{args.device}')

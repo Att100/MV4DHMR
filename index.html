@@ -89,7 +89,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Carnegie Mellon University</span><br>
-            <span class="author-block"><sup>2</sup>AIST</span><br>
+            <span class="author-block"><sup>2</sup>National Institute of Advanced Industrial Science and Technology</span><br>
             <span class="author-block">WACV 2026</span>
             <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
           </div>
@@ -166,6 +166,19 @@
 </section> -->
 <!-- End teaser video -->
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/arch.png" alt="Multi-Cali Anything Architecture"
+        style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+      <h2 class="content has-text-centered">
+        Architecture of human and environmental reconstruction: The system processes multi-view input through a state-of-the-art single-view HMR method to estimate human meshes for each view. Person identification across views identifies the same individual in multiple views. The meshes are then refined using triangulation. For human tracking and motion smoothness, we ensure continuous and coherent reconstruction throughout the video. In addition, the 3D environment is reconstructed from selected scenes and integrated seamlessly with the human reconstruction to provide a cohesive XR experience.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -185,9 +198,50 @@
 
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Visualization</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="./static/images/qualitative.png" alt="Multi-Cali Anything Architecture"
+            style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+          <h2 class="content has-text-centered">
+            Visualization of human reconstruction (directly test on Shelf without fine-tuning).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Quantitative Results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="./static/images/tab_chi3d.png" alt="Multi-Cali Anything Architecture"
+            style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+          <h2 class="content has-text-centered">
+            Performance comparison on the CHI3D dataset. ”Fine-tune” indicates whether the method was fine-tuned on the CHI3D training set or directly tested without additional training. The notation of ‡ denotes the adaptation and fine-tuning.
+          </h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="./static/images/tab_hi4d.png" alt="Multi-Cali Anything Architecture"
+            style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+          <h2 class="content has-text-centered">
+            Performance comparison on the Hi4D dataset. ”Fine-tune” indicates whether the method was fine-tuned on the Hi4D training set or directly tested without additional training.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

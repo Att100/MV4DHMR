@@ -1,3 +1,5 @@
+
+
 # Training-free Multi-view 4D Human Motion Reconstruction Virtual Reality System
 
 ## 1. Introduction
@@ -121,7 +123,7 @@ Please replace `<YOUR_CHI3D_DATASET_PATH>` to your downloaded CHI3D data path.
 ```
 python test.py --exp_name model_large_672_chi3d_sv \
     --dataset chi3d \
-    --dataset_dir <YOUR_CHI3D_DATASET_PATH \
+    --dataset_dir <YOUR_CHI3D_DATASET_PATH> \
     --pretrained_path models/multiHMR/multiHMR_672_L.pt \
     --smplx_dir models \
     --smplx2smpl_path models/smplx/smplx2smpl.pkl \
@@ -249,4 +251,3 @@ Our approach use `K-Means` on human joints to perform cross-view human matching,
 ## References
 
 [1] MultiHMR: https://github.com/naver/multi-hmr
-
